@@ -1,13 +1,6 @@
-import { Request, Response } from "express";
+import {Controller} from "../libs/Controller"
+export class GlobalController extends Controller {
 
-export class GlobalController {
-  protected request: Request;
-  protected response: Response;
-
-  constructor(request: Request, response: Response) {
-    this.request = request;
-    this.response = response;
-  }
 public homePage(){
 
 

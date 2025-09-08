@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+nav {
+  width: 40px;
+}
+.all_navbar {
+  background-color: #7b3306;
+  color: aliceblue;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  height: 60px;
+}
+
+.left_navbar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.right_navbar {
+  display: flex;
+  gap: 10px;
+  list-style: none;
+}
+
+.all_header {
+  background-color: #fcfbec;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  color: #7b3306;
+  font-size: xxx-large;
+}
+
+.description_park {
+  color: #008236;
+  font-size: larger;
+}
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+.button_reservation {
+  background-color: #7b3306;
+  color: #fcfbec;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.button_describe_park {
+  border-color: #008236;
+  background-color: #fcfbec;
+  color: #008236;
+  padding: 8px;
+  border-radius: 5px;
+}
+
+.all_footer {
+  background-color: #7b3306;
+  display: flex;
+  height: 60px;
+  color: aliceblue;
+  flex-direction: column;
+  align-items: center;
+}
+
+.attractions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.category {
+  color: #7b3306;
+}
+
+.describe_category {
+  color: #008236;
+}
+
+/* .title_footer {
+} */
+.text_footer {
+  color: #fedc5a;
+}
+
+.list_footer {
+  display: flex;
+  list-style: none;
+  gap: 10px;
+}
