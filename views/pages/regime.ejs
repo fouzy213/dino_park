@@ -1,0 +1,11 @@
+<%- include('../partials/head') %> <%- include('../partials/navBar') %>
+
+<h1>Dinosaures <%= dinos[0] ? dinos[0].regime : '' %></h1>
+
+<ul>
+  <% dinos.forEach(dino => { %>
+  <li><%= dino.name_ %> - <%= dino.dino_description %></li>
+  <% }) %>
+</ul>
+
+<%- include('../partials/footer') %>

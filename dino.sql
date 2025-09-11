@@ -22,7 +22,9 @@ Regime VARCHAR(50) NOT NULL,
     Name_ VARCHAR(50) NOT NULL,
 dino_description TEXT NOT NULL
 );
-
+SELECT * from dinosaures where regime = 'Eau';
+SELECT * from dinosaures where regime = 'Terrien';
+SELECT * from dinosaures where regime = 'Aérien';
 
 
 CREATE TABLE Type_billet(
