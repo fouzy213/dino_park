@@ -17,7 +17,7 @@ export class DinosauresController extends Controller {
       const dinos = await this.dinoRepository.findDinosByRegime(regime);
 
 
-      this.response.render("regime.ejs", { dinos });
+      this.response.render("regime.ejs", { dinos ,  url: this.request.originalUrl });
     } catch (error) {
       console.error("Erreur lors de la récupération des dinos :", error);
       this.response.status(500).send("Erreur serveur");

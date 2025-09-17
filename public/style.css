@@ -22,6 +22,10 @@ nav {
   gap: 10px;
 }
 
+.hover_title:hover {
+  color: #fedc5a;
+}
+
 .right_navbar {
   display: flex;
   gap: 10px;
@@ -33,6 +37,7 @@ nav {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 25px;
 }
 
 .title {
@@ -44,10 +49,7 @@ nav {
   color: #008236;
   font-size: larger;
 }
-.buttons {
-  display: flex;
-  gap: 15px;
-}
+
 .button_reservation {
   background-color: #7b3306;
   color: #fcfbec;
@@ -70,6 +72,7 @@ nav {
   color: aliceblue;
   flex-direction: column;
   align-items: center;
+  width: -webkit-fill-available;
 }
 
 .attractions {
@@ -85,8 +88,6 @@ nav {
   color: #008236;
 }
 
-/* .title_footer {
-} */
 .text_footer {
   color: #fedc5a;
 }
@@ -95,4 +96,150 @@ nav {
   display: flex;
   list-style: none;
   gap: 10px;
+}
+
+.all_box_two_round {
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  margin-bottom: 25px;
+  align-items: flex-end;
+}
+.box_horaires {
+  color: #008236;
+  border-radius: 10px;
+  border: solid 2px #008236;
+  padding: 20px;
+}
+.title_in_box {
+  color: #7b3306;
+}
+
+.image {
+  width: 200px;
+  border-radius: 10px;
+}
+
+.image_regime {
+  width: 450px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+a {
+  text-decoration: none;
+  color: #fcfbec;
+}
+
+.right_navbar :hover {
+  color: #fedc5a;
+}
+
+body {
+  background-color: #fcfbec;
+}
+
+.all_texte_regime {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.photo_and_text {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  align-items: center;
+}
+
+.all_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  padding: 40px;
+}
+.title_form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+fieldset {
+  padding: 75px;
+}
+
+.form_title_first {
+  color: #7b3306;
+}
+.sub_title_form {
+  color: #008236;
+}
+
+.number_ticket {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+#dateInput {
+  border-color: #008236;
+  padding: 5px;
+  border-radius: 20px;
+}
+.date_form {
+  display: flex;
+  flex-direction: column;
+}
+
+.select_col {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 5px;
+}
+
+.all_input_in_form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.adult,
+.child,
+.senior {
+  padding: 5px;
+  border-radius: 5px;
+  border-color: #008236;
+}
+
+.phone_email {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+}
+
+.input_email,
+.input_phone {
+  padding: 5px;
+  border-radius: 10px;
+  border-color: #008236;
+}
+
+#reserveBtn {
+  background-color: #7b3306;
+  opacity: 50%;
+  padding: 5px;
+  border-radius: 10px;
+  color: #fcfbec;
+}
+
+#reserveBtn.enabled {
+  background-color: #7b3306;
+  cursor: pointer;
+  opacity: 100%;
+}
+.total_and_button {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
 }

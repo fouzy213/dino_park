@@ -1,9 +1,10 @@
 import express, { Router } from "express";
 import globalRouter from "./globalRouter";
 import dinoRouter from "./dinoRouter";
+import formRouter from "./formsRouter";
 
 const router = Router();
-
+router.use(formRouter)
 router.use(globalRouter);
 router.use(dinoRouter)
 //Initialization du router express

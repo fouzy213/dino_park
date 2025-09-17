@@ -1,0 +1,133 @@
+<%- include('../partials/head') %> <%- include('../partials/navBar') %>
+
+<div class="all_form">
+  <div class="title_form">
+    <h1 class="form_title_first">Réservez Votre Aventure</h1>
+    <p class="sub_title_form">
+      Choisissez votre date et le nombre de visiteurs
+    </p>
+  </div>
+
+  <form action="/reservation" method="POST">
+    <fieldset>
+      <div class="all_input_in_form">
+        <div class="title_in_form">
+          <h2 class="form_title_first">Réservation de Billets</h2>
+          <p class="sub_title_form">
+            Sélectionnez votre date de visite et le nombre de visiteurs
+          </p>
+        </div>
+
+        <div class="date_form">
+          <h3 class="form_title_first">Date de visite</h3>
+          <input type="date" id="dateInput" name="dateInput" required />
+        </div>
+
+        <div class="number_ticket">
+          <div class="select_col">
+            <h3 class="form_title_first">Adulte (45€)</h3>
+            <select class="adult" name="adult" required>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+
+          <div class="select_col">
+            <h3 class="form_title_first">Enfant (35€)</h3>
+            <select class="child" name="child" required>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+          <div class="select_col">
+            <h3 class="form_title_first">Sénior (40€)</h3>
+            <select class="senior" name="senior" required>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="phone_email">
+          <input
+            class="input_email"
+            type="email"
+            name="email"
+            placeholder="Votre email"
+            required
+          />
+          <input
+            class="input_phone"
+            type="tel"
+            name="phone"
+            placeholder="Votre téléphone"
+            required
+          />
+        </div>
+
+        <div class="total_and_button">
+          <h3 class="form_title_first" id="total">Total = 0 €</h3>
+          <button id="reserveBtn" disabled>Réserver maintenant</button>
+        </div>
+         </div>
+      </div>
+    </fieldset>
+  </form>
+</div>
+
+<script>
+  const dateInput = document.getElementById("dateInput");
+  const adultSelect = document.querySelector('select[name="adult"]');
+  const childSelect = document.querySelector('select[name="child"]');
+  const seniorSelect = document.querySelector('select[name="senior"]');
+  const emailInput = document.querySelector('input[name="email"]');
+  const phoneInput = document.querySelector('input[name="phone"]');
+  const totalElement = document.getElementById("total");
+  const reserveBtn = document.getElementById("reserveBtn");
+
+  const today = new Date().toISOString().split("T")[0];
+  dateInput.value = today;
+  dateInput.min = today;
+
+  function updateForm() {
+    const adult = parseInt(adultSelect.value);
+    const child = parseInt(childSelect.value);
+    const senior = parseInt(seniorSelect.value);
+    const total = adult * 45 + child * 35 + senior * 40;
+
+    totalElement.textContent = `Total = ${total} €`;
+
+    if (
+      dateInput.value &&
+      emailInput.value &&
+      phoneInput.value &&
+      (adult > 0 || child > 0 || senior > 0)
+    ) {
+      reserveBtn.disabled = false;
+      reserveBtn.classList.add("enabled");
+    } else {
+      reserveBtn.disabled = true;
+      reserveBtn.classList.remove("enabled");
+    }
+  }
+
+  [
+    dateInput,
+    adultSelect,
+    childSelect,
+    seniorSelect,
+    emailInput,
+    phoneInput,
+  ].forEach((item) => item.addEventListener("input", updateForm));
+</script>
+
+<%- include('../partials/footer') %>

@@ -6,7 +6,10 @@
     des créatures légendaires dans un environement
   </p>
   <div class="buttons">
-    <button class="button_reservation">Réserver Maintenant</button>
+    <a class="link_fom_nav" href="/form">
+      <button class="button_reservation">Réserver Maintenant</button>
+    </a>
+
     <button class="button_describe_park">Découvrir le parc</button>
   </div>
   <div class="attractions">
@@ -15,14 +18,50 @@
       Explorer les différentes zones du parc et rencontrez les géants du passé
     </p>
   </div>
-  <div class="buttons">
-    <a href="/dinos/Aérien"
-      ><button class="button_describe_park">Aerien</button></a
-    >
-    <a href="/dinos/Terrien"
-      ><button class="button_describe_park">Terrien</button></a
-    >
-    <a href="/dinos/Eau"><button class="button_describe_park">Eau</button></a>
+      <div class="all_box_two_round">
+        <div class="photo_and_text">
+          <a href="/dinos/aerien">
+            <img class="image" src="/assets/dino_volatif.png" alt="" />
+          </a>
+          <div class="box_horaires">
+            <h3 class="title_in_box">Horaires</h3>
+            <ul>
+              <li>Lun-Ven: 9h00-18h00</li>
+              <li>Sam-Dim: 8h00-20h00</li>
+              <li>Vacances:8h00 - 21h00</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="photo_and_text">
+          <a href="/dinos/terrien">
+            <img class="image" src="/assets/dinosaure_terre.webp" alt="" />
+          </a>
+          <div class="box_horaires">
+            <h3 class="title_in_box">Tarifs</h3>
+            <ul>
+              <li>Adulte:45€</li>
+              <li>Enfant(3-12 ans):35€</li>
+              <li>Senior (+65 ans):40€</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="photo_and_text">
+          <a href="/dinos/eau">
+            <img class="image" src="/assets/Dinosaure_eau.webp" alt="" />
+          </a>
+          <div class="box_horaires">
+            <h3 class="title_in_box">Sécurité</h3>
+            <ul>
+              <li>Barrières de sécurité renforcées</li>
+              <li>Personnel qualifié 24h/24</li>
+              <li>protocoles d'urgence certifiés</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </header>
 <%- include('../partials/footer') %>

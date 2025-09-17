@@ -1,11 +1,33 @@
 <%- include('../partials/head') %> <%- include('../partials/navBar') %>
 
-<h1>Dinosaures <%= dinos[0] ? dinos[0].regime : '' %></h1>
+<div class="all_texte_regime">
+  <h1 class="title">Dinosaures <%= dinos[0] ? dinos[0].regime : '' %></h1>
+  <ol class="texte_regime">
+    <% dinos.forEach(dino => { %>
+    <li><%= dino.name_ %> - <%= dino.dino_description %></li>
+    <% }) %>
+  </ol>
+  <% if (url.includes("aerien")) { %>
+  <img
+    class="image_regime"
+    src="/assets/dino_volatif.png"
+    alt="Dinosaure aérien"
+  />
 
-<ul>
-  <% dinos.forEach(dino => { %>
-  <li><%= dino.name_ %> - <%= dino.dino_description %></li>
-  <% }) %>
-</ul>
+  <% } else if (url.includes("terrien")) { %>
 
-<%- include('../partials/footer') %>
+  <img
+    class="image_regime"
+    src="/assets/dinosaure_terre.webp"
+    alt="Dinosaure terrestre"
+  />
+
+  <% } else if (url.includes("eau")) { %>
+  <img
+    class="image_regime"
+    src="/assets/dinosaure_eau.webp"
+    alt="Dinosaure aquatique"
+  />
+</div>
+
+<% } %> <%- include('../partials/footer') %>
