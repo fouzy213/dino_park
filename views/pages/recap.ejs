@@ -1,4 +1,19 @@
 <%- include('../partials/head') %> <%- include('../partials/navBar') %>
 <h1>Merci pour la reservation</h1>
+<li>Nombre de billets Adulte : <%= adult %></li>
+<li>Nombre de billets Enfant : <%= child %></li>
+<li>Nombre de billets Senior : <%= senior %></li>
+<li>Nombre de billets Senior : <%= senior %></li>
+<li>email = <%= email %></li>
+<% reservations.forEach(resa => { %>
 
-<%- include('../partials/footer') %>
+<li>Identifiant <%= resa.id %></li>
+
+<li>Date de Reservation <%= resa.date_reservation %></li>
+
+<li>Date de Visite <%= resa.date_de_visite %> -</li>
+<li>Prix Total <%= resa.prix %> €</li>
+
+<li>Téléphone = <%= phone %></li>
+
+<% }) %> <%- include('../partials/footer') %>
