@@ -1,19 +1,30 @@
 <%- include('../partials/head') %> <%- include('../partials/navBar') %>
-<h1>Merci pour la reservation</h1>
-<li>Nombre de billets Adulte : <%= adult %></li>
-<li>Nombre de billets Enfant : <%= child %></li>
-<li>Nombre de billets Senior : <%= senior %></li>
-<li>Nombre de billets Senior : <%= senior %></li>
-<li>email = <%= email %></li>
-<% reservations.forEach(resa => { %>
 
-<li>Identifiant <%= resa.id %></li>
+<div class="all_recap">
+  <div class="title_recap">
+    <h1 class="title">Merci pour la reservation</h1>
 
-<li>Date de Reservation <%= resa.date_reservation %></li>
+    <h1 class="title"><%= email %></h1>
+  </div>
+  <fieldset>
+    <% reservations.forEach(resa => { %>
 
-<li>Date de Visite <%= resa.date_de_visite %> -</li>
-<li>Prix Total <%= resa.prix %> €</li>
+    <li>Identifiant <%= resa.id %></li>
 
-<li>Téléphone = <%= phone %></li>
+    <li>Date de Reservation <%= resa.date_reservation %></li>
 
+    <li>Téléphone = <%= phone %></li>
+    <li>email = <%= email %></li>
+
+    <li>Date de Visite <%= resa.date_de_visite %> -</li>
+
+    <li>Prix Total <%= resa.prix %> €</li>
+  </fieldset>
+  <fieldset>
+    <li>Nombre de billets Adulte : <%= adult %></li>
+    <li>Nombre de billets Enfant : <%= child %></li>
+    <li>Nombre de billets Senior : <%= senior %></li>
+    <li>Nombre de billets Senior : <%= senior %></li>
+  </fieldset>
+</div>
 <% }) %> <%- include('../partials/footer') %>

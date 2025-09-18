@@ -1,4 +1,5 @@
 import {Controller} from "../libs/Controller"
+import z from "zod"
 import { Reservation } from "../models/Reservation";
 import { ReservationRepository } from "../repositories/ReservationRepository";
 export class FormController extends Controller {
@@ -11,8 +12,10 @@ public creatForm(){
 
 public async submitForm() {
   try {
+
     const { dateInput, adult, child, senior, id_user } = this.request.body;
     console.log("Données reçues :", this.request.body);
+
 
     const total =
       parseInt(adult) * 45 +

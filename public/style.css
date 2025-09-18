@@ -243,3 +243,43 @@ fieldset {
   flex-direction: column;
   align-items: stretch;
 }
+
+.all_recap {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 40px;
+  align-items: flex-start;
+}
+
+@media screen and (max-width: 960px) {
+  .all_box_two_round {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-bottom: 25px;
+    align-items: center;
+  }
+
+  .image_regime {
+    width: 75%;
+  }
+
+  .phone_email {
+    display: flex;
+    flex-direction: column;
+  }
+  .number_ticket {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .title {
+    font-size: large;
+  }
+  .buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+}
