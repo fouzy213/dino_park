@@ -1,13 +1,15 @@
 <%- include('../partials/head') %>
 <div class="all_navbar">
   <div class="left_navbar">
-    <a class="link_fom_nav" href="/">
+    <a class="link_from_nav" href="/">
       <h2 class="hover_title">Jurassic Adventures</h2>
     </a>
     <h4>Parc a Thème</h4>
   </div>
-
-  <ul class="right_navbar">
+  <div class="burger" id="burger">
+    <img src="../../assets/menu.png" alt="menu" />
+  </div>
+  <ul class="right_navbar" id="menu">
     <li>Attractions</li>
     <a href="/form">
       <li>Réserver</li>
@@ -15,3 +17,13 @@
     <li>Infos</li>
   </ul>
 </div>
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const burger = document.getElementById("burger");
+    const menu = document.getElementById("menu");
+
+    burger.addEventListener("click", () => {
+      menu.classList.toggle("active");
+    });
+  });
+</script>
