@@ -12,7 +12,6 @@ public async submitForm() {
   try {
 
     const { dateInput, adult, child, senior, id_user } = this.request.body;
-    console.log("Données reçues :", this.request.body);
 
 
     const total =
@@ -20,12 +19,10 @@ public async submitForm() {
       parseInt(child) * 35 +
       parseInt(senior) * 40;
 
-      console.log("Total :", total);
       // Création de la réservation
       const id_user0 = 1;
       const reservationRepo = new ReservationRepository();
     const reservations = await reservationRepo.ajouterReservation(dateInput, total,id_user0  );
-    console.log("Réservation ajoutée :", reservations);
 
     // Passer les données à la vue récapitulative
   this.response.render("recap.ejs", {
